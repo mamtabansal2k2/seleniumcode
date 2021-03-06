@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Portfolio suit">
+<listeners>
+	<listener class-name="listener.MyTestNGListener"></listener>
+</listeners>
+  <test name="Create Portfolio Test">  <!-- removed session.java from classes bcz we have defaultLogin() method now in BaseTest.java @BeforeTest -->
+    <classes>
+      <class name="testcases.rediff.PortfolioManagement">
+      	<methods>
+      		<include name="createPortfolio"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+  
+  <test name="Delete Portfolio Test">
+    <classes>
+      <class name="testcases.rediff.PortfolioManagement">
+      	<methods>
+      		<include name="deletePortfolio"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+  
+</suite>

@@ -1,0 +1,20 @@
+{
+"browsers":["Mozilla","Chrome"],
+"parallelsuites":"1",
+"testsuites":[
+	{
+	"runmode":"Y",
+	"name":"Portfolio Suite",
+	"testdatajsonfile":"data//portfoliodata.json",
+	"suitfilename":"suites//portfoliosuite.json",
+	"paralleltests":"N"
+	},
+	{
+	"runmode":"N",
+	"name":"Stock Suite",
+	"testdatajsonfile":"data//stockdata.json",
+	"suitfilename":"suites//stocksuite.json",
+	"paralleltests":"N"
+	}
+]	
+}

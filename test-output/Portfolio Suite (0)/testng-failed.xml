@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Portfolio Suite (0)]">
+  <listeners>
+    <listener class-name="listener.MyTestNGListener"/>
+  </listeners>
+  <test thread-count="5" name="Create Portfolio-Create New Portfolio-pos-IT.-1(failed)">
+    <parameter name="sbrowser" value="Chrome"/>
+    <parameter name="browser" value="Mozilla"/>
+    <parameter name="action" value="createport"/>
+    <parameter name="iteration" value="0"/>
+    <parameter name="dataflag" value="createnewportfolio"/>
+    <parameter name="datafilepath" value="C:\Users\User\eclipse-workspace\seleniumTraining\DataDrivenFramework1//src//test//resources//jsons//data//portfoliodata.json"/>
+    <classes>
+      <class name="testcases.rediff.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="quit"/>
+          <include name="createPortfolio"/>
+        </methods>
+      </class> <!-- testcases.rediff.PortfolioManagement -->
+    </classes>
+  </test> <!-- Create Portfolio-Create New Portfolio-pos-IT.-1(failed) -->
+  <test thread-count="5" name="Create Portfolio-Create New Portfolio-pos-IT.-2(failed)">
+    <parameter name="sbrowser" value="Chrome"/>
+    <parameter name="browser" value="Mozilla"/>
+    <parameter name="action" value="createport"/>
+    <parameter name="iteration" value="1"/>
+    <parameter name="dataflag" value="createnewportfolio"/>
+    <parameter name="datafilepath" value="C:\Users\User\eclipse-workspace\seleniumTraining\DataDrivenFramework1//src//test//resources//jsons//data//portfoliodata.json"/>
+    <classes>
+      <class name="testcases.rediff.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="quit"/>
+          <include name="createPortfolio"/>
+        </methods>
+      </class> <!-- testcases.rediff.PortfolioManagement -->
+    </classes>
+  </test> <!-- Create Portfolio-Create New Portfolio-pos-IT.-2(failed) -->
+</suite> <!-- Failed suite [Portfolio Suite (0)] -->
