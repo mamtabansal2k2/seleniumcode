@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="3" failed="1" ignored="12" total="16" passed="0">
+<testng-results skipped="4" failed="0" ignored="12" total="16" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Portfolio Suite (0)" duration-ms="70112" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:08:32 MST">
+  <suite name="Portfolio Suite (0)" duration-ms="20690" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:40:04 MST">
     <groups>
     </groups>
-    <test name="Create Portfolio-Create New Portfolio-pos-IT.-1" duration-ms="70031" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:08:32 MST">
+    <test name="Create Portfolio-Create New Portfolio-pos-IT.-1" duration-ms="20537" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:40:04 MST">
       <class name="testcases.rediff.PortfolioManagement">
-        <test-method status="FAIL" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@643b1d11]" name="beforeTest" is-config="true" duration-ms="69873" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="FAIL" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@b6e64d2]" name="beforeTest" is-config="true" duration-ms="20484" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f713686]]>
+                <![CDATA[org.testng.TestRunner@dc7bf5d]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+              <![CDATA[Timed out waiting for driver server to start.
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:522)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:127)
 at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:93)
@@ -37,9 +39,9 @@ at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:105)
 at keywords.GenericKeywords.openBrowser(GenericKeywords.java:41)
 at testbase.BaseTest.beforeTest(BaseTest.java:65)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -59,65 +61,65 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
-Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:60)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
-... 31 more
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:1258 after 60000 ms
-at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
-at java.util.concurrent.CompletableFuture.get(Unknown Source)
-at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
-... 42 more
-Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:1258 after 60000 ms
-at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
-at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
-at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
-at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
-at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.lang.Thread.run(Unknown Source)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: unknown
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 35 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: unknown
+at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:130)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:198)
+at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)
+at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)
+... 7 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@643b1d11]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@b6e64d2]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f713686]]>
+                <![CDATA[org.testng.TestRunner@dc7bf5d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@643b1d11]" name="createPortfolio" duration-ms="0" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@b6e64d2]" name="createPortfolio" duration-ms="0" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+              <![CDATA[Timed out waiting for driver server to start.
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: driver.version: ChromeDriver
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:522)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:127)
 at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:93)
@@ -127,9 +129,9 @@ at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:105)
 at keywords.GenericKeywords.openBrowser(GenericKeywords.java:41)
 at testbase.BaseTest.beforeTest(BaseTest.java:65)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -149,45 +151,43 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
-Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:60)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
-... 31 more
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:1258 after 60000 ms
-at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
-at java.util.concurrent.CompletableFuture.get(Unknown Source)
-at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
-... 42 more
-Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:1258 after 60000 ms
-at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
-at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
-at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
-at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
-at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.lang.Thread.run(Unknown Source)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: unknown
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 35 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: unknown
+at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:130)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:198)
+at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
+at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)
+at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)
+... 7 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPortfolio -->
-        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@643b1d11]" name="quit" is-config="true" duration-ms="149" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@b6e64d2]" name="quit" is-config="true" duration-ms="43" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f713686]]>
+                <![CDATA[org.testng.TestRunner@dc7bf5d]]>
               </value>
             </param>
           </params>
@@ -196,13 +196,13 @@ at java.lang.Thread.run(Unknown Source)
         </test-method> <!-- quit -->
       </class> <!-- testcases.rediff.PortfolioManagement -->
     </test> <!-- Create Portfolio-Create New Portfolio-pos-IT.-1 -->
-    <test name="Create Portfolio-Create New Portfolio-pos-IT.-2" duration-ms="20" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+    <test name="Create Portfolio-Create New Portfolio-pos-IT.-2" duration-ms="39" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
       <class name="testcases.rediff.PortfolioManagement">
-        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@51081592]" name="beforeTest" is-config="true" duration-ms="3" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@77368e48]" name="beforeTest" is-config="true" duration-ms="17" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@13006998]]>
+                <![CDATA[org.testng.TestRunner@487c891]]>
               </value>
             </param>
           </params>
@@ -214,9 +214,9 @@ at java.lang.Thread.run(Unknown Source)
               <![CDATA[org.testng.SkipException: Skipping as runmode is N
 at testbase.BaseTest.beforeTest(BaseTest.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -236,24 +236,26 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@51081592]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@77368e48]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@13006998]]>
+                <![CDATA[org.testng.TestRunner@487c891]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@51081592]" name="createPortfolio" duration-ms="0" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@77368e48]" name="createPortfolio" duration-ms="0" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping as runmode is N]]>
@@ -262,9 +264,9 @@ at runner.JSONRunner.main(JSONRunner.java:119)
               <![CDATA[org.testng.SkipException: Skipping as runmode is N
 at testbase.BaseTest.beforeTest(BaseTest.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -284,17 +286,19 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPortfolio -->
-        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@51081592]" name="quit" is-config="true" duration-ms="14" started-at="2021-03-03T06:08:32 MST" finished-at="2021-03-03T06:08:32 MST">
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@77368e48]" name="quit" is-config="true" duration-ms="12" started-at="2021-03-10T06:40:04 MST" finished-at="2021-03-10T06:40:04 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@13006998]]>
+                <![CDATA[org.testng.TestRunner@487c891]]>
               </value>
             </param>
           </params>
@@ -304,70 +308,50 @@ at runner.JSONRunner.main(JSONRunner.java:119)
       </class> <!-- testcases.rediff.PortfolioManagement -->
     </test> <!-- Create Portfolio-Create New Portfolio-pos-IT.-2 -->
   </suite> <!-- Portfolio Suite (0) -->
-  <suite name="Portfolio Suite" duration-ms="146681" started-at="2021-03-03T06:04:55 MST" finished-at="2021-03-03T06:07:22 MST">
+  <suite name="Portfolio Suite" duration-ms="73695" started-at="2021-03-10T06:38:29 MST" finished-at="2021-03-10T06:39:43 MST">
     <groups>
     </groups>
-    <test name="Create Portfolio-Create New Portfolio-pos-IT.-1" duration-ms="145302" started-at="2021-03-03T06:04:55 MST" finished-at="2021-03-03T06:07:20 MST">
+    <test name="Create Portfolio-Create New Portfolio-pos-IT.-1" duration-ms="72769" started-at="2021-03-10T06:38:29 MST" finished-at="2021-03-10T06:39:42 MST">
       <class name="testcases.rediff.PortfolioManagement">
-        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@3dd3bcd]" name="beforeTest" is-config="true" duration-ms="91047" started-at="2021-03-03T06:04:55 MST" finished-at="2021-03-03T06:06:26 MST">
+        <test-method status="FAIL" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@42074c68]" name="beforeTest" is-config="true" duration-ms="66718" started-at="2021-03-10T06:38:29 MST" finished-at="2021-03-10T06:39:36 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7096b474]]>
+                <![CDATA[org.testng.TestRunner@2aa2811e]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@3dd3bcd]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-03-03T06:06:27 MST" finished-at="2021-03-03T06:06:27 MST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7096b474]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@3dd3bcd]" name="createPortfolio" duration-ms="34593" started-at="2021-03-03T06:06:27 MST" finished-at="2021-03-03T06:07:02 MST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7096b474]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[The following asserts failed:
-Option Folio1000 not present in Drop down portfolioid_dropdown_id]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: FirefoxDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Option Folio1000 not present in Drop down portfolioid_dropdown_id
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at keywords.GenericKeywords.assertAll(GenericKeywords.java:217)
-at keywords.GenericKeywords.reportFailure(GenericKeywords.java:212)
-at keywords.ValidationKeywords.validateSelectedValueInDropDown(ValidationKeywords.java:42)
-at testcases.rediff.PortfolioManagement.createPortfolio(PortfolioManagement.java:27)
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:522)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:189)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:177)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:155)
+at keywords.GenericKeywords.openBrowser(GenericKeywords.java:44)
+at testbase.BaseTest.beforeTest(BaseTest.java:65)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
@@ -380,17 +364,138 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:60)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+... 32 more
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1895)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
+... 43 more
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
+at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
+at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
+at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
+at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
+at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPortfolio -->
-        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@3dd3bcd]" name="quit" is-config="true" duration-ms="18731" started-at="2021-03-03T06:07:02 MST" finished-at="2021-03-03T06:07:20 MST">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@42074c68]" name="beforeMethod" is-config="true" duration-ms="45" started-at="2021-03-10T06:39:36 MST" finished-at="2021-03-10T06:39:36 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7096b474]]>
+                <![CDATA[org.testng.TestRunner@2aa2811e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@42074c68]" name="createPortfolio" duration-ms="0" started-at="2021-03-10T06:39:36 MST" finished-at="2021-03-10T06:39:36 MST">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-B0PUHGH', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:522)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:189)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:177)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:155)
+at keywords.GenericKeywords.openBrowser(GenericKeywords.java:44)
+at testbase.BaseTest.beforeTest(BaseTest.java:65)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at runner.TestNGRunner.run(TestNGRunner.java:82)
+at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:60)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+... 32 more
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1895)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
+... 43 more
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
+at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
+at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
+at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
+at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
+at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortfolio -->
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@42074c68]" name="quit" is-config="true" duration-ms="5796" started-at="2021-03-10T06:39:36 MST" finished-at="2021-03-10T06:39:42 MST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2aa2811e]]>
               </value>
             </param>
           </params>
@@ -399,13 +504,13 @@ at runner.JSONRunner.main(JSONRunner.java:119)
         </test-method> <!-- quit -->
       </class> <!-- testcases.rediff.PortfolioManagement -->
     </test> <!-- Create Portfolio-Create New Portfolio-pos-IT.-1 -->
-    <test name="Create Portfolio-Create New Portfolio-pos-IT.-2" duration-ms="131" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:07:22 MST">
+    <test name="Create Portfolio-Create New Portfolio-pos-IT.-2" duration-ms="137" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:39:43 MST">
       <class name="testcases.rediff.PortfolioManagement">
-        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@1810399e]" name="beforeTest" is-config="true" duration-ms="2" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:07:22 MST">
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@2059de89]" name="beforeTest" is-config="true" duration-ms="93" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:39:43 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@138fe6ec]]>
+                <![CDATA[org.testng.TestRunner@566be44d]]>
               </value>
             </param>
           </params>
@@ -417,9 +522,9 @@ at runner.JSONRunner.main(JSONRunner.java:119)
               <![CDATA[org.testng.SkipException: Skipping as runmode is N
 at testbase.BaseTest.beforeTest(BaseTest.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -439,24 +544,26 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@1810399e]" name="beforeMethod" is-config="true" duration-ms="73" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:07:22 MST">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@2059de89]" name="beforeMethod" is-config="true" duration-ms="8" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:39:43 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@138fe6ec]]>
+                <![CDATA[org.testng.TestRunner@566be44d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@1810399e]" name="createPortfolio" duration-ms="0" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:07:22 MST">
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@2059de89]" name="createPortfolio" duration-ms="0" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:39:43 MST">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping as runmode is N]]>
@@ -465,9 +572,9 @@ at runner.JSONRunner.main(JSONRunner.java:119)
               <![CDATA[org.testng.SkipException: Skipping as runmode is N
 at testbase.BaseTest.beforeTest(BaseTest.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
@@ -487,17 +594,19 @@ at org.testng.TestNG.runSuites(TestNG.java:1032)
 at org.testng.TestNG.run(TestNG.java:1000)
 at runner.TestNGRunner.run(TestNGRunner.java:82)
 at runner.JSONRunner.main(JSONRunner.java:119)
+at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPortfolio -->
-        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@1810399e]" name="quit" is-config="true" duration-ms="50" started-at="2021-03-03T06:07:22 MST" finished-at="2021-03-03T06:07:22 MST">
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:testcases.rediff.PortfolioManagement@2059de89]" name="quit" is-config="true" duration-ms="26" started-at="2021-03-10T06:39:43 MST" finished-at="2021-03-10T06:39:43 MST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@138fe6ec]]>
+                <![CDATA[org.testng.TestRunner@566be44d]]>
               </value>
             </param>
           </params>
