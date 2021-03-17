@@ -17,7 +17,7 @@
           <include name="beforeMethod"/>
           <include name="beforeTest"/>
           <include name="quit"/>
-          <include name="createPortfolio"/>
+          <include name="createPortfolio" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.rediff.PortfolioManagement -->
     </classes>

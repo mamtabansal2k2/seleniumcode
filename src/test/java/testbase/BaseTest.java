@@ -38,6 +38,8 @@ public class BaseTest {
 		System.out.println("datafilepath= "+datafilepath);
 		System.out.println("iteration= "+iteration);
 		System.out.println("browser= "+browser);
+		
+		//reading data from JSON
 		JSONObject data = new DataUtil().getTestData(datafilepath,dataflag,Integer.parseInt(iteration));
 		context.setAttribute("data", data);
 		String runmode = (String) data.get("runmode");

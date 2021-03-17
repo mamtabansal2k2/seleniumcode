@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">2 suites</span>
+      <span class="top-banner-font-1">2 suites, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -122,7 +122,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Portfolio_Suite">
-              <span class="suite-name border-skipped">Portfolio Suite</span>
+              <span class="suite-name border-failed">Portfolio Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -175,7 +175,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Portfolio_Suite" class="hide-methods failed suite-Portfolio_Suite"> (hide)</a> <!-- hide-methods failed suite-Portfolio_Suite -->
+                      <a href="#" panel-name="suite-Portfolio_Suite" class="show-methods failed suite-Portfolio_Suite"> (show)</a> <!-- show-methods failed suite-Portfolio_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Portfolio_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Portfolio_Suite" title="testcases.rediff.PortfolioManagement" hash-for-method="createPortfolio(org.testng.TestRunner@45e37a7e)">createPortfolio(org.testng.TestRunner@45e37a7e)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Portfolio_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -184,11 +198,6 @@
                       <a href="#" panel-name="suite-Portfolio_Suite" class="show-methods skipped suite-Portfolio_Suite"> (show)</a> <!-- show-methods skipped suite-Portfolio_Suite -->
                     </span>
                     <div class="method-list-content skipped suite-Portfolio_Suite">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Portfolio_Suite" title="testcases.rediff.PortfolioManagement" hash-for-method="createPortfolio">createPortfolio</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Portfolio_Suite" title="testcases.rediff.PortfolioManagement" hash-for-method="createPortfolio">createPortfolio</a> <!-- method navigator-link -->
@@ -234,28 +243,26 @@ Driver info: driver.version: ChromeDriver
 	at testbase.BaseTest.beforeTest(BaseTest.java:65)
 	at runner.TestNGRunner.run(TestNGRunner.java:82)
 	at runner.JSONRunner.main(JSONRunner.java:119)
-	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
-	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
 Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
 System info: host: &apos;DESKTOP-B0PUHGH&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
 Driver info: driver.version: unknown
-	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
-	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
 	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
-	... 35 more
+	... 33 more
 Caused by: org.openqa.selenium.WebDriverException: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
 Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
 System info: host: &apos;DESKTOP-B0PUHGH&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
 Driver info: driver.version: unknown
 	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:130)
 	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:198)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
+	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
 Caused by: java.lang.InterruptedException: Process timed out after waiting for 20000 ms.
 	at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)
 	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)
@@ -273,8 +280,6 @@ Caused by: java.lang.InterruptedException: Process timed out after waiting for 2
 	at testbase.BaseTest.beforeTest(BaseTest.java:59)
 	at runner.TestNGRunner.run(TestNGRunner.java:82)
 	at runner.JSONRunner.main(JSONRunner.java:119)
-	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
-	at java.lang.Thread.run(Thread.java:748)
 ... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -283,6 +288,33 @@ Caused by: java.lang.InterruptedException: Process timed out after waiting for 2
           </div> <!-- suite-Portfolio_Suite__0_-class-skipped -->
         </div> <!-- panel Portfolio_Suite__0_ -->
         <div panel-name="suite-Portfolio_Suite" class="panel Portfolio_Suite">
+          <div class="suite-Portfolio_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.rediff.PortfolioManagement</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createPortfolio(org.testng.TestRunner@45e37a7e)">
+                  </a> <!-- createPortfolio(org.testng.TestRunner@45e37a7e) -->
+                  <span class="method-name">createPortfolio</span>
+                  <span class="parameters">(org.testng.TestRunner@45e37a7e)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	Option Folio1000 not present in Drop down portfolioid_dropdown_id
+	at keywords.GenericKeywords.assertAll(GenericKeywords.java:217)
+	at keywords.GenericKeywords.reportFailure(GenericKeywords.java:212)
+	at keywords.ValidationKeywords.validateSelectedValueInDropDown(ValidationKeywords.java:42)
+	at testcases.rediff.PortfolioManagement.createPortfolio(PortfolioManagement.java:27)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at runner.TestNGRunner.run(TestNGRunner.java:82)
+	at runner.JSONRunner.main(JSONRunner.java:119)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Portfolio_Suite-class-failed -->
           <div class="suite-Portfolio_Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -294,65 +326,10 @@ Caused by: java.lang.InterruptedException: Process timed out after waiting for 2
                   <a name="createPortfolio">
                   </a> <!-- createPortfolio -->
                   <span class="method-name">createPortfolio</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
-System info: host: &apos;DESKTOP-B0PUHGH&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:522)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:127)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:189)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:177)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:155)
-	at keywords.GenericKeywords.openBrowser(GenericKeywords.java:44)
-	at testbase.BaseTest.beforeTest(BaseTest.java:65)
-	at runner.TestNGRunner.run(TestNGRunner.java:82)
-	at runner.JSONRunner.main(JSONRunner.java:119)
-	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:60)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
-	... 32 more
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
-	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
-	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1895)
-	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
-	... 43 more
-Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:18259 after 60000 ms
-	at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
-	at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
-	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
-	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
-	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 more
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createPortfolio">
-                  </a> <!-- createPortfolio -->
-                  <span class="method-name">createPortfolio</span>
                   <div class="stack-trace">org.testng.SkipException: Skipping as runmode is N
 	at testbase.BaseTest.beforeTest(BaseTest.java:59)
 	at runner.TestNGRunner.run(TestNGRunner.java:82)
 	at runner.JSONRunner.main(JSONRunner.java:119)
-	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:254)
-	at java.lang.Thread.run(Thread.java:748)
 ... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -545,7 +522,7 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createPortfolio')
 data.setCell(0, 2, 'testcases.rediff.PortfolioManagement')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 13691);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createPortfolio')
 data.setCell(1, 2, 'testcases.rediff.PortfolioManagement')
@@ -554,7 +531,7 @@ window.suiteTableData['Portfolio_Suite']= { tableData: data, tableDiv: 'times-di
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Portfolio_Suite">
               </div> <!-- times-div-Portfolio_Suite -->
             </div> <!-- times-div -->
@@ -632,36 +609,36 @@ return data;
               <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">beforeTest(org.testng.TestRunner@dc7bf5d)</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@2cd2c8fe)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@dc7bf5d)</span>
-                <span class="method-start">20485 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@2cd2c8fe)</span>
+                <span class="method-start">20166 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createPortfolio</span>
-                <span class="method-start">20489 ms</span>
+                <span class="method-start">20167 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">quit(org.testng.TestRunner@dc7bf5d)</span>
-                <span class="method-start">20494 ms</span>
+                <span class="method-name">quit(org.testng.TestRunner@2cd2c8fe)</span>
+                <span class="method-start">20168 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(org.testng.TestRunner@487c891)</span>
-                <span class="method-start">20651 ms</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@2a492f2a)</span>
+                <span class="method-start">20388 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@487c891)</span>
-                <span class="method-start">20669 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@2a492f2a)</span>
+                <span class="method-start">20391 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createPortfolio</span>
-                <span class="method-start">20674 ms</span>
+                <span class="method-start">20392 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">quit(org.testng.TestRunner@487c891)</span>
-                <span class="method-start">20678 ms</span>
+                <span class="method-name">quit(org.testng.TestRunner@2a492f2a)</span>
+                <span class="method-start">20392 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -673,38 +650,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.rediff.PortfolioManagement</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeTest(org.testng.TestRunner@2aa2811e)</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@45e37a7e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@2aa2811e)</span>
-                <span class="method-start">66909 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@45e37a7e)</span>
+                <span class="method-start">68886 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createPortfolio</span>
-                <span class="method-start">66957 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createPortfolio(org.testng.TestRunner@45e37a7e)</span>
+                <span class="method-start">68888 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">quit(org.testng.TestRunner@2aa2811e)</span>
-                <span class="method-start">66966 ms</span>
+                <span class="method-name">quit(org.testng.TestRunner@45e37a7e)</span>
+                <span class="method-start">82628 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(org.testng.TestRunner@566be44d)</span>
-                <span class="method-start">73551 ms</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@548e76f1)</span>
+                <span class="method-start">91499 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@566be44d)</span>
-                <span class="method-start">73646 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@548e76f1)</span>
+                <span class="method-start">91504 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createPortfolio</span>
-                <span class="method-start">73655 ms</span>
+                <span class="method-start">91514 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">quit(org.testng.TestRunner@566be44d)</span>
-                <span class="method-start">73662 ms</span>
+                <span class="method-name">quit(org.testng.TestRunner@548e76f1)</span>
+                <span class="method-start">91515 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
